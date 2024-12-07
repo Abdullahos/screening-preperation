@@ -6,10 +6,11 @@ public class LongestSubstringWithAtMostKDistinctCharacters {
             return s.length();
         }
         int longest = 1;
-        int i = 0, j = 0;
         int distinct = 1;
         int[] freq = new int[26];
-        while (j < s.length()) {
+
+        int i = 0;
+        for (int j = 0; j < s.length(); j++) {
             if (freq[s.charAt(j) - 'a'] == 0) {
                 distinct++;
                 while (distinct > k && i <= j) {
@@ -22,7 +23,6 @@ public class LongestSubstringWithAtMostKDistinctCharacters {
             }
             longest = Math.max(longest, j - i + 1);
             freq[s.charAt(j) - 'a']++;
-            j++;
         }
         return longest;
     }
