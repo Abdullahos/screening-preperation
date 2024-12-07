@@ -1,7 +1,7 @@
 package twopointers;
 //https://leetcode.com/problems/longest-repeating-character-replacement/
 
-public class CharacterReplacement {
+public class B_CharacterReplacement {
     public int characterReplacement(String s, int k) {
         int longest = 1;
         int[] freqs = new int[26];
@@ -26,7 +26,7 @@ public class CharacterReplacement {
     }
 
     public static void main(String[] args) {
-        CharacterReplacement c = new CharacterReplacement();
+        B_CharacterReplacement c = new B_CharacterReplacement();
         System.out.println(c.characterReplacement("ABAB", 2));
         System.out.println(c.characterReplacement("AABABBA", 1));
         System.out.println(c.characterReplacement("ABBB", 2));

@@ -3,7 +3,7 @@ package twopointers;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LengthOfTheLongestSubstringWithNoConsecutiveSameLetters {
+public class C_LengthOfTheLongestSubstringWithNoConsecutiveSameLetters {
 
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
@@ -23,7 +23,7 @@ public class LengthOfTheLongestSubstringWithNoConsecutiveSameLetters {
     }
 
     public static void main(String[] args) {
-        LengthOfTheLongestSubstringWithNoConsecutiveSameLetters l = new LengthOfTheLongestSubstringWithNoConsecutiveSameLetters();
+        C_LengthOfTheLongestSubstringWithNoConsecutiveSameLetters l = new C_LengthOfTheLongestSubstringWithNoConsecutiveSameLetters();
         System.out.println(l.lengthOfLongestSubstring("abcabcbb"));
 
         System.out.println(l.lengthOfLongestSubstring("abcdefg"));

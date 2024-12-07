@@ -1,6 +1,6 @@
 package twopointers;
 
-public class MinSubArrayLen {
+public class A_MinSubArrayLen {
     public int minSubArrayLen(int target, int[] nums) {
         int min = Integer.MAX_VALUE;
         int i = 0, j = 0, sum = 0;
@@ -16,7 +16,7 @@ public class MinSubArrayLen {
     }
 
     public static void main(String[] args) {
-        MinSubArrayLen minSubArrayLen = new MinSubArrayLen();
+        A_MinSubArrayLen minSubArrayLen = new A_MinSubArrayLen();
         System.out.println(minSubArrayLen.minSubArrayLen(3, new int[]{1, 3, -1, -3}));
         System.out.println(minSubArrayLen.minSubArrayLen(3, new int[]{-3}));
         System.out.println(minSubArrayLen.minSubArrayLen(7, new int[]{-2,3,1,2,4,3}));
