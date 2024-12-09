@@ -1,4 +1,4 @@
-package twopointers;
+package slidingwindow;
 
 public class A_MinSubArrayLen {
     public int minSubArrayLen(int target, int[] nums) {

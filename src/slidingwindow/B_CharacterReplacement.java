@@ -1,4 +1,4 @@
-package twopointers;
+package slidingwindow;
 //https://leetcode.com/problems/longest-repeating-character-replacement/
 
 public class B_CharacterReplacement {

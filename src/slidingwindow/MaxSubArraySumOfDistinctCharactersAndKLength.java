@@ -1,9 +1,9 @@
-package twopointers;
+package slidingwindow;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class MaxSubArraySum {
+public class MaxSubArraySumOfDistinctCharactersAndKLength {
 
     public long maximumSubarraySum(int[] nums, int k) {
         long maxSum = 0, sum = 0;
@@ -31,7 +31,7 @@ public class MaxSubArraySum {
     }
 
     public static void main(String[] args) {
-        MaxSubArraySum m = new MaxSubArraySum();
+        MaxSubArraySumOfDistinctCharactersAndKLength m = new MaxSubArraySumOfDistinctCharactersAndKLength();
         System.out.println(m.maximumSubarraySum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}, 2));
         System.out.println(m.maximumSubarraySum(new int[]{1, 5, 4, 2, 9, 9, 9}, 3));
         System.out.println(m.maximumSubarraySum(new int[]{4, 4, 4}, 3));

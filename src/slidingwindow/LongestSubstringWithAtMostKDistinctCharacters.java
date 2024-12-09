@@ -1,4 +1,4 @@
-package twopointers;
+package slidingwindow;
 
 public class LongestSubstringWithAtMostKDistinctCharacters {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
