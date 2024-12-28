@@ -2,9 +2,7 @@ package tree;
 
 import com.sun.source.tree.Tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class Sysmetric {
     public boolean isSymmetric(TreeNode root) {
@@ -47,6 +45,49 @@ public class Sysmetric {
             list = newList;
         }
 
+        return true;
+    }
+
+    public boolean isSymmetricIterative_Queue(TreeNode root) {
+        if (root.left == null || root.right == null) {
+            return root.left == root.right;
+        }
+
+        Queue<TreeNode> q = new LinkedList<TreeNode>();
+        q.add(root.left);
+        q.add(root.right);
+
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int i = 0; i < size; i += 2) {
+                TreeNode l = q.remove();
+                if (q.isEmpty()) {
+                    return false;
+                }
+                TreeNode r = q.remove();
+
+                if (l == null || r == null) {
+                    if (l != r) {
+                        return false;
+                    }
+                } else if (l.val != r.val) {
+                    return false;
+                }
+
+                if (l != null) {
+                    q.add(l.left);
+                }
+                if (r != null) {
+                    q.add(r.right);
+                }
+                if (l != null) {
+                    q.add(l.right);
+                }
+                if (r != null) {
+                    q.add(r.left);
+                }
+            }
+        }
         return true;
     }
     private boolean isSymmetricRec(TreeNode l, TreeNode r) {
